@@ -5,10 +5,10 @@ const tensorFlowController = require('../controllers/tensorFlowController')
 
 router.get('/', tensorFlowController.getTensorflows);
 
-router.get('/:id/edit', tensorFlowController.updateTensorflow);
+router.put('/:id/edit', tensorFlowController.updateTensorflow);
 
-router.get('/:id/delete', tensorFlowController.deleteTensorflow);
+router.delete('/:id/delete', tensorFlowController.deleteTensorflow);
 
-router.get('/create', tensorFlowController.createTensorflow);
+router.post('/create', tensorFlowController.createTensorflow);
 
 module.exports = router;
