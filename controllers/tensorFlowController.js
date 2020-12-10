@@ -1,7 +1,7 @@
 const tensorFlowModel = require('../models/tensorFlowModel')
 
 exports.getTensorflows = (req, res, next) => {
-  tensorFlowModel.find({}).then(data => res.status(200).json(data))
+  tensorFlowModel.find({}).sort([['date', -1]]).then(data => res.status(200).json(data))
 }
 
 exports.updateTensorflow = (req, res, next) => {
